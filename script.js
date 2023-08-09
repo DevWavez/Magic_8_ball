@@ -22,7 +22,8 @@ $(document).ready(() => {
     $("#answer").fadeIn(4000);
 
     var randomNumber = Math.random();
-    var randomNumberForListOfAnswer = randomNumber * this.listOfAnswers.length;
+    var listOfAnswersLength = this.listOfAnswers.length; // Speichere die Länge der Liste
+    var randomNumberForListOfAnswer = randomNumber * listOfAnswersLength;
     var randomIndex = Math.floor(randomNumberForListOfAnswer);
     var answer = this.listOfAnswers[randomIndex];
 
