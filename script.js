@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(document).ready(function () {
   var magic8Ball = {};
   magic8Ball.listOfAnswers = [
     "No",
@@ -11,7 +11,7 @@ $(document).ready(() => {
 
   $("#answer").hide();
 
-  magic8Ball.askQuestion = (question) => {
+  magic8Ball.askQuestion = function (question) {
     $("#8ball").effect("shake");
 
     $("#8ball").attr(
@@ -22,7 +22,7 @@ $(document).ready(() => {
     $("#answer").fadeIn(4000);
 
     var randomNumber = Math.random();
-    var listOfAnswersLength = this.listOfAnswers.length; // Speichere die Länge der Liste
+    var listOfAnswersLength = this.listOfAnswers.length;
     var randomNumberForListOfAnswer = randomNumber * listOfAnswersLength;
     var randomIndex = Math.floor(randomNumberForListOfAnswer);
     var answer = this.listOfAnswers[randomIndex];
